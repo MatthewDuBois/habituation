@@ -16,4 +16,10 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  def destroy
+      avatar = Avatar.find(params[:id])
+      avatar.destroy
+      render json: {message: "Successfully removed avatar."}
+    end  
+
 end

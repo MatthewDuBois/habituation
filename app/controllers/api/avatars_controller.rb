@@ -1,6 +1,5 @@
 class Api::AvatarsController < ApplicationController
 
-  
 
   def create
     avatar = Avatar.new(

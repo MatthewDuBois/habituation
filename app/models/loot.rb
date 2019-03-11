@@ -1,2 +1,3 @@
 class Loot < ApplicationRecord
+  
 end

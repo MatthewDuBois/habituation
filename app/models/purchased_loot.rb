@@ -1,0 +1,2 @@
+class PurchasedLoot < ApplicationRecord
+end

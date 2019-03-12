@@ -1,9 +1,9 @@
 class Api::PurchasedLootsController < ApplicationController
   
   def create
-    purchased_loot = Purchased_loot.new
+    @purchased_loot = Purchased_loot.new
 
-    if purchased_loot.save
+    if @purchased_loot.save
       render json: {message: 'purchased_loot created successfully'}, status: :created
     else
       render json: {errors: purchased_loot.errors.full_message}, status: :bad_request  

@@ -3,5 +3,4 @@ class Avatar < ApplicationRecord
 
   has_many :habits
   has_many :purchased_loots
-  has_many :completed_habits, through: :habits 
 end

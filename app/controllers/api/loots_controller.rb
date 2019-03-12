@@ -6,12 +6,12 @@ class Api::LootsController < ApplicationController
   end
 
   def create
-    loot = Loot.new(
+    @loot = Loot.new(
                     name: params[:name],
                     cost: params[:cost]
                     )
 
-    if loot.save
+    if @loot.save
       render json: {message: 'loot created successfully'}, status: :created
     else
       render json: {errors: loot.errors.full_message}, status: :bad_request  

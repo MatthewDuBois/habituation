@@ -1,0 +1,1 @@
+json.partial! @habit_completed, partial: 'habit_completed', as: :habit_completed

@@ -1,5 +1,7 @@
 class Api::HabitsController < ApplicationController
-   def index
+  belongs_to :avatar
+
+  def index
     @habits = Habit.all
     render 'index.json.jbuilder'
   end

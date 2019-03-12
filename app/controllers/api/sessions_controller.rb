@@ -1,4 +1,5 @@
 class Api::SessionsController < ApplicationController
+  
   def create
     avatar = Avatar.find_by(email: params[:email])
     if avatar && avatar.authenticate(params[:password])
@@ -20,6 +21,6 @@ class Api::SessionsController < ApplicationController
       avatar = Avatar.find(params[:id])
       avatar.destroy
       render json: {message: "Successfully removed avatar."}
-    end  
+  end  
 
 end

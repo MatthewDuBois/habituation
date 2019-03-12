@@ -1,4 +1,6 @@
 class Api::LootsController < ApplicationController
+  
+
   def index
     @loots = Loot.all
     render 'index.json.jbuilder'

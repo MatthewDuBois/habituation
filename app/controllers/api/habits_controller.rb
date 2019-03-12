@@ -1,5 +1,6 @@
 class Api::HabitsController < ApplicationController
-   def index
+
+  def index
     @habits = Habit.all
     render 'index.json.jbuilder'
   end

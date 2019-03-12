@@ -1,4 +1,5 @@
 class Api::PurchasedLootsController < ApplicationController
+  
   def create
     purchased_loot = Purchased_loot.new
 

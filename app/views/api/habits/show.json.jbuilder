@@ -1,0 +1,1 @@
+json.partial! @habit, partial: 'habit', as: :habit

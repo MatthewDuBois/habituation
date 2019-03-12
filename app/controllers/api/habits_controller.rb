@@ -6,7 +6,7 @@ class Api::HabitsController < ApplicationController
   end
 
   def create
-    habit = Habit.new(
+    @habit = Habit.new(
                       name: params[:name],
                       description: params[:description],
                       active: params[:active],
@@ -15,7 +15,7 @@ class Api::HabitsController < ApplicationController
                       routine_time_quantity: params[:routine_time_quantity]
                       )
 
-    if habit.save
+    if @habit.save
       render json: {message: 'habit created successfully'}, status: :created
     else
       render json: {errors: habit.errors.full_message}, status: :bad_request  

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_162500) do
+ActiveRecord::Schema.define(version: 2019_03_12_145929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_162500) do
   create_table "habit_completeds", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "habit_id"
   end
 
   create_table "habits", force: :cascade do |t|
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_162500) do
     t.integer "routine_time_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "avatar_id"
   end
 
   create_table "loots", force: :cascade do |t|
@@ -52,6 +54,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_162500) do
   create_table "purchased_loots", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "avatar_id"
+    
   end
-
 end

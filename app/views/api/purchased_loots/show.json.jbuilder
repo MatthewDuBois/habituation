@@ -1,0 +1,1 @@
+json.partial! @purchased_loot, partial: 'purchased_loot', as: :purchased_loot

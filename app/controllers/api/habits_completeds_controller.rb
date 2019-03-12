@@ -1,5 +1,4 @@
 class Api::HabitsCompletedsController < ApplicationController
-  belongs_to :habit
 
   def create
     habits_completed = Habits_completed.new(

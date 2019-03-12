@@ -1,7 +1,5 @@
 class Api::PurchasedLootsController < ApplicationController
-  belongs_to :avatar
-  belongs_to :loot
-
+  
   def create
     purchased_loot = Purchased_loot.new
 

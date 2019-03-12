@@ -1,5 +1,4 @@
 class Api::HabitsController < ApplicationController
-  belongs_to :avatar
 
   def index
     @habits = Habit.all

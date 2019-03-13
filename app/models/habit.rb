@@ -1,5 +1,5 @@
 class Habit < ApplicationRecord
   belongs_to :avatar
-  has_one :habit_completed
+  has_many :habit_completed
   
 end

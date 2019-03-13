@@ -12,7 +12,8 @@ class Api::HabitsController < ApplicationController
                       active: params[:active],
                       points: params[:points],
                       routine_time_increment: params[:routine_time_increment],
-                      routine_time_quantity: params[:routine_time_quantity]
+                      routine_time_quantity: params[:routine_time_quantity],
+                      avatar_id: current_avatar.id
                       )
 
     if @habit.save

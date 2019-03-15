@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   patch '/habits/:id' => 'habits#update'
   delete '/habits/:id' => 'habits#destroy'
 
+  post '/habit_completeds' => 'habit_completeds#create'
+
   get '/loots' => 'loots#index'
   post '/loots' => 'loots#create'
   get '/loots/:id' => 'loots#show'

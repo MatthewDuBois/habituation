@@ -4,5 +4,8 @@ class Avatar < ApplicationRecord
   has_many :habits
   has_many :purchased_loots
 
- 
+ # def daily_checkin?
+   
+ # end
+
 end

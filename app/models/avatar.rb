@@ -4,8 +4,12 @@ class Avatar < ApplicationRecord
   has_many :habits
   has_many :purchased_loots
 
- # def daily_checkin?
-   
- # end
+  attr_accessor :gold_total, :level, :xp_total
+
+  # def initialize
+  #  @level = 1
+  #  @xp_total = 0
+  #  @gold_total = 0
+  # end
 
 end

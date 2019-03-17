@@ -1,21 +1,20 @@
 class Api::HabitCompletedsController < ApplicationController
 
   def create
-    @habits_completed = HabitCompleted.new(
-                    name: params[:name],
-                    cost: params[:cost]
+    @habit_completeds = HabitCompleted.new(
+                    habit_id: params[:habit_id],
                     )
 
-    if @habits_completed.save
-      render json: {message: 'habits_completed created successfully'}, status: :created
+    if @habit_completeds.save
+      render json: {message: 'habit_completeds created successfully'}, status: :created
     else
-      render json: {errors: habits_completed.errors.full_message}, status: :bad_request  
+      render json: {errors: @habit_completeds.errors.full_message}, status: :bad_request  
     end
   end
 
   def destroy
-      habits_completed = HabitCompleted.find(params[:id])
-      habits_completed.destroy
-      render json: {message: "Successfully removed habits_completed."}
+      habit_completeds = HabitCompleted.find(params[:id])
+      habit_completeds.destroy
+      render json: {message: "Successfully removed habit_completeds."}
     end  
 end

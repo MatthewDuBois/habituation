@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_12_145929) do
+ActiveRecord::Schema.define(version: 2019_03_15_210135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,11 @@ ActiveRecord::Schema.define(version: 2019_03_12_145929) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.integer "currency_total"
+    t.integer "gold_total"
     t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "xp_total"
   end
 
   create_table "habit_completeds", force: :cascade do |t|
@@ -36,12 +37,15 @@ ActiveRecord::Schema.define(version: 2019_03_12_145929) do
     t.string "name"
     t.string "description"
     t.boolean "active"
-    t.integer "points"
+    t.integer "xp"
     t.integer "routine_time_increment"
-    t.integer "routine_time_quantity"
+    t.string "routine_time_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "avatar_id"
+    t.boolean "completed"
+    t.integer "difficulty"
+    t.integer "gold"
   end
 
   create_table "loots", force: :cascade do |t|
@@ -49,12 +53,13 @@ ActiveRecord::Schema.define(version: 2019_03_12_145929) do
     t.integer "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
   create_table "purchased_loots", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "avatar_id"
-    
   end
+
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_204353) do
+ActiveRecord::Schema.define(version: 2019_03_15_210135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_204353) do
     t.boolean "active"
     t.integer "xp"
     t.integer "routine_time_increment"
-    t.integer "routine_time_quantity"
+    t.string "routine_time_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "avatar_id"

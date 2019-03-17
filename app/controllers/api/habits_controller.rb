@@ -11,10 +11,11 @@ class Api::HabitsController < ApplicationController
                       description: params[:description],
                       active: params[:active],
                       difficulty: params[:difficulty],
-                      points: params[:points],
+                      xp: params[:xp],
                       routine_time_increment: params[:routine_time_increment],
                       routine_time_quantity: params[:routine_time_quantity],
                       completed: params[:completed],
+                      gold: params[:gold],
                       avatar_id: current_avatar.id
                       )
 
@@ -38,7 +39,8 @@ class Api::HabitsController < ApplicationController
       @habit.difficulty = params[:difficulty] || @habit.difficulty
       @habit.active = params[:active] || @habit.active
       @habit.completed = params[:completed] || @habit.completed
-      @habit.points = params[:points] || @habit.points
+      @habit.xp = params[:xp] || @habit.xp
+      @habit.gold = params[:gold] || @habit.gold
       @habit.routine_time_increment = params[:routine_time_increment] || @habit.routine_time_increment
       @habit.routine_time_quantity = params[:routine_time_quantity] || @habit.routine_time_quantity
 

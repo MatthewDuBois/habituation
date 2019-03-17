@@ -6,7 +6,7 @@ class Habit < ApplicationRecord
 
   attr_accessor :level, :xp, :gold
 
-  def initialize
+  def ground_zero
    @level = 1
    @xp = 0
    @gold = 0

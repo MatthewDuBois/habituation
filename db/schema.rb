@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_210135) do
+ActiveRecord::Schema.define(version: 2019_03_18_204156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 2019_03_15_210135) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.integer "gold_total"
-    t.integer "level"
+    t.integer "gold_total", default: 0
+    t.integer "level", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "xp_total"
+    t.integer "xp_total", default: 0
   end
 
   create_table "habit_completeds", force: :cascade do |t|

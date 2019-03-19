@@ -18,3 +18,5 @@ class Api::HabitCompletedsController < ApplicationController
       render json: {message: "Successfully removed habit_completeds."}
     end  
 end
+
+# when completed...create action updates gold and ex total....assign level based on total xp

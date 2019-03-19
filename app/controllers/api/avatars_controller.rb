@@ -5,11 +5,7 @@ class Api::AvatarsController < ApplicationController
                         name: params[:name],
                         email: params[:email],
                         password: params[:password],
-                        password_confirmation: params[:password_confirmation],
-                        level: 1,
-                        xp_total: 0,
-                        gold_total: 0
-
+                        password_confirmation: params[:password_confirmation]
                         )
 
     if @avatar.save

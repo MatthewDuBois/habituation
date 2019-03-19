@@ -6,10 +6,5 @@ class Avatar < ApplicationRecord
 
   attr_accessor :gold_total, :level, :xp_total
 
-  # def initialize
-  #  @level = 1
-  #  @xp_total = 0
-  #  @gold_total = 0
-  # end
 
 end

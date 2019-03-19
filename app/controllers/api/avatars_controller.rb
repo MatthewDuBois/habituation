@@ -5,7 +5,7 @@ class Api::AvatarsController < ApplicationController
                         name: params[:name],
                         email: params[:email],
                         password: params[:password],
-                        password_confirmation: params[:password_confirmation]
+                        password_confirmation: params[:password_confirmation],
                         )
 
     if @avatar.save
@@ -27,6 +27,9 @@ class Api::AvatarsController < ApplicationController
       @avatar.name = params[:name] || @avatar.name
       @avatar.avatar_url = params[:avatar_url] || @avatar.avatar_url
       @avatar.email = params[:email] || @avatar.email
+      @avatar.gold_total = params[:gold_total] || @avatar.gold_total
+      @avatar.xp_total = params[:xp_total] || @avatar.xp_total
+      @avatar.level = params[:level] || @avatar.level
 
       if @avatar.save
         render 'show.json.jbuilder'

@@ -1,7 +1,8 @@
 class Api::HabitsController < ApplicationController
-  
+  before_action :authenticate_avatar
+
   def index
-    @habits = Habit.all
+    @habits = current_avatar.habits
     render 'index.json.jbuilder'
   end
 

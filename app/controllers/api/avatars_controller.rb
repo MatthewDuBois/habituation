@@ -5,7 +5,11 @@ class Api::AvatarsController < ApplicationController
                         name: params[:name],
                         email: params[:email],
                         password: params[:password],
-                        password_confirmation: params[:password_confirmation]
+                        password_confirmation: params[:password_confirmation],
+                        level: 1,
+                        xp_total: 0,
+                        gold_total: 0
+
                         )
 
     if @avatar.save
@@ -17,18 +21,16 @@ class Api::AvatarsController < ApplicationController
 
 
   def show
-    @avatar = Avatar.find(params[:id])
+    @avatar = current_avatar
     render 'show.json.jbuilder'
   end
 
   def update
-      @avatar = Avatar.find(params[:id])
+      @avatar = current_avatar
 
       @avatar.name = params[:name] || @avatar.name
       @avatar.avatar_url = params[:avatar_url] || @avatar.avatar_url
       @avatar.email = params[:email] || @avatar.email
-      @avatar.currency_total = params[:currency_total] || @avatar.currency_total
-      @avatar.level = params[:level] || @avatar.level
 
       if @avatar.save
         render 'show.json.jbuilder'

@@ -4,4 +4,3 @@ json.email avatar.email
 json.currency_total avatar.currency_total
 json.level avatar.level
 
-

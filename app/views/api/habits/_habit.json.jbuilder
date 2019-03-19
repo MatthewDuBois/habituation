@@ -12,4 +12,3 @@ json.routine_time_quantity habit.routine_time_quantity
 json.habit_completeds do
   json.array! habit.habit_completeds, partial: 'api/habit_completeds/habit_completed', as: :habit_completed
 end
-

@@ -4,7 +4,6 @@ class Avatar < ApplicationRecord
   has_many :habits
   has_many :purchased_loots
 
-  # attr_accessor :gold_total, :level, :xp_total
   def check_level
     p self.level
     p "*" * 50
@@ -31,22 +30,4 @@ class Avatar < ApplicationRecord
       p self.level
     end
   end
-
-  # def get_xp 
-  #   # habit = current avatars current habit
-  #   habits = self.habits
-  #   habits.each do |habit|
-  #     if habit.id == params[:habit_id]
-  #       if habit.difficulty == 0
-  #         self.xp_total += 17.5
-  #       elsif habit.difficulty == 1
-  #         self.xp_total += 32
-  #       else habit.difficulty == 2
-  #         self.xp_total += 48.33
-  #       end   
-  #     end
-  #   end
-  #   self.save
-  # end
-
 end

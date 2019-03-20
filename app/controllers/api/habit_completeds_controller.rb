@@ -23,6 +23,7 @@ class Api::HabitCompletedsController < ApplicationController
         end   
       end
         current_avatar.update(xp_total: xp)
+        current_avatar.update(gold_total: gold)
     end
 
     current_avatar.check_level

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :api do
+  get '/avatars/' => 'avatars#index'
   get '/avatars/:id' => 'avatars#show'
   post "/avatars" => "avatars#create"
 

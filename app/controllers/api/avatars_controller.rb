@@ -1,14 +1,17 @@
 class Api::AvatarsController < ApplicationController
   
+  def index
+    @avatars = Avatar.all
+    render 'index.json.jbuilder'
+  end
+
+
   def create
     @avatar = Avatar.new(
                         name: params[:name],
                         email: params[:email],
                         password: params[:password],
                         password_confirmation: params[:password_confirmation],
-                        level: 1,
-                        xp_total: 0,
-                        gold_total: 0
 
                         )
 
@@ -31,6 +34,10 @@ class Api::AvatarsController < ApplicationController
       @avatar.name = params[:name] || @avatar.name
       @avatar.avatar_url = params[:avatar_url] || @avatar.avatar_url
       @avatar.email = params[:email] || @avatar.email
+      @avatar.gold_total = params[:gold_total] || @avatar.gold_total
+      @avatar.xp_total = params[:xp_total] || @avatar.xp_total
+      @avatar.level = params[:level] || @avatar.level
+      @avatar.avatar_class = params[:avatar_class] || @avatar.avatar_class
 
       if @avatar.save
         render 'show.json.jbuilder'

@@ -3,6 +3,7 @@ class Avatar < ApplicationRecord
 
   has_many :habits
   has_many :purchased_loots
+  has_one :specialization
 
   def check_level
     lvl = self.level
@@ -19,16 +20,16 @@ class Avatar < ApplicationRecord
   end
 
   def check_class
-    if self.level == 3
+    if self.level == 3 && self.avatar_class != "neophyte"
       choose_class
     end
   end
 
-  # def choose_class
-  #   if self.
-  #   end  
+  def choose_class
+    if self.
+    end  
     
-  # end
+  end
 
 
 

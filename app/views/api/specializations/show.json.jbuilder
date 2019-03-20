@@ -1,0 +1,1 @@
+json.partial! @specialization, partial: 'specialization', as: :specialization

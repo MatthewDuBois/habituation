@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   post '/purchased_loots' => 'purchased_loots#create'
   delete '/purchased_loots/:id' => 'purchased_loots#destroy'
 
+  get '/specializations/' => 'specializations#index'
+  get '/specializations/:id' => 'specializations#show'
+  get '/specializations/' => 'specializations#create'
+
   post '/sessions' => 'sessions#create'
    
   end

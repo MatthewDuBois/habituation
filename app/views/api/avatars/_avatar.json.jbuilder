@@ -16,4 +16,10 @@ json.knowledge avatar.knowledge
 json.gratitude avatar.gratitude
 json.vigor avatar.vigor
 
-
+json.specialization do
+  if avatar.specialization
+    json.partial! avatar.specialization, partial: 'api/specializations/specialization', as: :specialization
+  else
+    json.avatar_class
+  end
+end

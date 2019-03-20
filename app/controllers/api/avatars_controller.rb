@@ -48,8 +48,6 @@ class Api::AvatarsController < ApplicationController
       @avatar.knowledge = params[:knowledge] || @avatar.knowledge
       @avatar.gratitude = params[:gratitude] || @avatar.gratitude
       @avatar.vigor = params[:vigor] || @avatar.vigor
-
-      level = current_avatar
   
 
       if @avatar.save

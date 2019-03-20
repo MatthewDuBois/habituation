@@ -39,6 +39,19 @@ class Api::AvatarsController < ApplicationController
       @avatar.level = params[:level] || @avatar.level
       @avatar.avatar_class = params[:avatar_class] || @avatar.avatar_class
 
+      @avatar.physicality = params[:physicality] || @avatar.physicality
+      @avatar.intelligence = params[:intelligence] || @avatar.intelligence
+      @avatar.mindfulness = params[:mindfulness] || @avatar.mindfulness
+      @avatar.humility = params[:humility] || @avatar.humility
+      @avatar.intuition = params[:intuition] || @avatar.intuition
+      @avatar.zen = params[:zen] || @avatar.zen
+      @avatar.knowledge = params[:knowledge] || @avatar.knowledge
+      @avatar.gratitude = params[:gratitude] || @avatar.gratitude
+      @avatar.vigor = params[:vigor] || @avatar.vigor
+
+      level = current_avatar
+  
+
       if @avatar.save
         render 'show.json.jbuilder'
       else

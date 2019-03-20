@@ -3,9 +3,4 @@ class Habit < ApplicationRecord
   has_many :habit_completeds
 
   enum difficulty: {easy: 0, medium: 1, hard: 2}
-
-  # attr_accessor :xp, :gold
-
-
-
 end

@@ -1,0 +1,1 @@
+json.array! @specializations, partial: 'specialization', as: :specialization

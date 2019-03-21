@@ -42,5 +42,3 @@ class Api::HabitCompletedsController < ApplicationController
     end  
 end
 
-
-# when completed...create action updates gold and ex total....assign level based on total xp

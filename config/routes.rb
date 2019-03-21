@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/avatars/' => 'avatars#index'
   get '/avatars/:id' => 'avatars#show'
   post "/avatars" => "avatars#create"
+  patch "/avatars/:id" => "avatars#update"
 
   get '/habits' => 'habits#index'
   post '/habits' => 'habits#create'

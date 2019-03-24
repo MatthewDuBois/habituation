@@ -12,7 +12,14 @@ class Api::SpecializationsController < ApplicationController
   end
 
   def create
+    @specialization = Specialization.new(
+                      avatar_id: params[:avatar_id],
+                      name: params[:name],
+                      code: params[:code]
+                        )
+    avatar = current_avatar
     
+
     
   end
 

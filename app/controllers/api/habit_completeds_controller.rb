@@ -1,5 +1,5 @@
 class Api::HabitCompletedsController < ApplicationController
-
+  before_action :authenticate_avatar
   def create
     @habit_completeds = HabitCompleted.new(
                     habit_id: params[:habit_id]
@@ -42,5 +42,3 @@ class Api::HabitCompletedsController < ApplicationController
     end  
 end
 
-
-# when completed...create action updates gold and ex total....assign level based on total xp

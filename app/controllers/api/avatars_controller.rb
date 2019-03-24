@@ -16,9 +16,9 @@ class Api::AvatarsController < ApplicationController
                         )
 
     if @avatar.save
-      render json: {message: 'avatar created successfully'}, status: :created
+      render 'show.json.jbuilder'
     else
-      render json: {errors: avatar.errors.full_message}, status: :bad_request  
+      render json: {errors: @avatar.errors.full_message}, status: :bad_request  
     end
   end
 
@@ -37,7 +37,6 @@ class Api::AvatarsController < ApplicationController
       @avatar.gold_total = params[:gold_total] || @avatar.gold_total
       @avatar.xp_total = params[:xp_total] || @avatar.xp_total
       @avatar.level = params[:level] || @avatar.level
-      @avatar.avatar_class = params[:avatar_class] || @avatar.avatar_class
 
       @avatar.physicality = params[:physicality] || @avatar.physicality
       @avatar.intelligence = params[:intelligence] || @avatar.intelligence
@@ -48,6 +47,8 @@ class Api::AvatarsController < ApplicationController
       @avatar.knowledge = params[:knowledge] || @avatar.knowledge
       @avatar.gratitude = params[:gratitude] || @avatar.gratitude
       @avatar.vigor = params[:vigor] || @avatar.vigor
+      @avatar.path = params[:path] || @avatar.path
+      @avatar.points = params[:points] || @avatar.points
   
 
       if @avatar.save

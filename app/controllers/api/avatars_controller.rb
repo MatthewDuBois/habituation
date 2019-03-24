@@ -48,6 +48,7 @@ class Api::AvatarsController < ApplicationController
       @avatar.gratitude = params[:gratitude] || @avatar.gratitude
       @avatar.vigor = params[:vigor] || @avatar.vigor
       @avatar.path = params[:path] || @avatar.path
+      @avatar.points = params[:points] || @avatar.points
   
 
       if @avatar.save

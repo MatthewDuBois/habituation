@@ -15,6 +15,7 @@ json.zen avatar.zen
 json.knowledge avatar.knowledge
 json.gratitude avatar.gratitude
 json.vigor avatar.vigor
+json.points avatar.points
 
 # json.specialization do
 #   if avatar.specialization

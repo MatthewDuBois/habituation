@@ -11,11 +11,14 @@ class Avatar < ApplicationRecord
     lvl = self.level
     breakpoint = lvl * 100
     xp = self.xp_total
+    points = self.points
     if breakpoint < xp
       self.level += 1
+      self.points += 1
       new_xp = (xp - breakpoint) 
       self.update(xp_total: new_xp)  
-      self.update!(level: self.level) 
+      self.update(level: self.level) 
+      self.update(points: self.points)
     end
     check_path
   end
@@ -28,7 +31,7 @@ class Avatar < ApplicationRecord
 
   def choose_path
     p "hello world" * 10
-    # allow use of front-end path form
+   render 'show.json.jbuilder'
     
   end
 

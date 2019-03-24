@@ -1,5 +1,5 @@
 class Api::HabitsController < ApplicationController
-  before_action :authenticate_avatar
+  # before_action :authenticate_avatar
 
   def index
     @habits = current_avatar.habits

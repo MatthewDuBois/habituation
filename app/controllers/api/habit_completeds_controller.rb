@@ -1,5 +1,5 @@
 class Api::HabitCompletedsController < ApplicationController
-
+  before_action :authenticate_avatar
   def create
     @habit_completeds = HabitCompleted.new(
                     habit_id: params[:habit_id]
